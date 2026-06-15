@@ -14,18 +14,18 @@ export default function BeforeAfter() {
 
   const slideData = {
     paint: {
-      before: '/assets/before_paint.png',
-      after: '/assets/after_paint.png',
+      before: 'assets/before_paint.png',
+      after: 'assets/after_paint.png',
       desc: "Remove paint swirls, micro-scratches, and oxidation to restore deep reflections."
     },
     interior: {
-      before: '/assets/before_interior.png',
-      after: '/assets/after_interior.png',
+      before: 'assets/before_interior.png',
+      after: 'assets/after_interior.png',
       desc: "Deep decontamination, leather rejuvenation, and meticulous stain extraction."
     },
     ceramic: {
-      before: '/assets/before_paint.png', // base paint before treatment
-      after: '/assets/service_ceramic.png', // glossy coated finish
+      before: 'assets/before_paint.png', // base paint before treatment
+      after: 'assets/service_ceramic.png', // glossy coated finish
       desc: "Extreme wet-look gloss combined with hydrophobic barrier protection."
     }
   };
