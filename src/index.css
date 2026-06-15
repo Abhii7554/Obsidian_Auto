@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+
+  --color-brand-primary: #111111;
+  --color-brand-secondary: #F7F7F5;
+  --color-brand-accent: #C9A227;
+  
+  --color-brand-dark-card: #161616;
+  --color-brand-dark-border: #262626;
+  --color-brand-light-border: #E5E5E3;
+  --color-brand-muted-dark: #8E8E8E;
+  --color-brand-muted-light: #5A5A58;
+
+  --font-serif: "Cinzel", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  
+  --animate-ken-burns: kenburns 25s ease infinite alternate;
+  --animate-fade-in-up: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fade-in: fadeIn 0.8s ease-out forwards;
+  --animate-scroll-indicator: bounceScroll 2s infinite;
+}
+
+@keyframes kenburns {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  100% {
+    transform: scale(1.08) translate(-1%, -1%);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounceScroll {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-brand-primary);
+  color: var(--color-brand-secondary);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar for Luxury Aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+::-webkit-scrollbar-thumb {
+  background: #C9A227;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B08D20;
+}
+
+/* Hide default scrollbar buttons */
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Custom styles for editorial layouts */
+.editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(247, 247, 245, 0.2);
+  color: transparent;
+}
+
+/* CSS-only subtle parallax container */
+.parallax-container {
+  perspective: 8px;
+  perspective-origin: 50% 50%;
+}
+
+.parallax-bg {
+  transform: translateZ(-2px) scale(1.25);
+}
+
+/* Delay Utlities for CSS animations */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-700 { animation-delay: 700ms; }
+
+/* Interactive Before & After handle */
+.before-after-handle {
+  box-shadow: 0 0 15px rgba(0,0,0,0.5), 0 0 0 1px rgba(201, 162, 39, 0.4);
+}
+
+/* Hide styling for range slider element if used */
+input[type="range"]::-webkit-slider-thumb {
+  pointer-events: auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: #C9A227;
+  cursor: ew-resize;
+}
