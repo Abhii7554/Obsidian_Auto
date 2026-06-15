@@ -4,11 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/Obsidian_Auto/',
   plugins: [react(), tailwindcss()],
-})
-
-import { defineConfig } from 'vite'
-
-export default defineConfig({
-  base: 'Obsidian_Auto/'
 })
