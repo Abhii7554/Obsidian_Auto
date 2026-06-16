@@ -85,7 +85,7 @@ export default function Hero({ onBookClick, onExploreClick }) {
               {/* Subtle CSS Parallax Image Layer */}
               <div className="absolute inset-0 w-full h-full overflow-hidden">
                 <img 
-                  src="/assets/hero_car.png" 
+                  src={import.meta.env.BASE_URL + 'assets/hero_car.png'} 
                   alt="Obsidian Auto Spa Luxury Detailing" 
                   className="w-full h-full object-cover object-center scale-100 group-hover:scale-105 transition-transform duration-[6000ms] ease-out select-none"
                   loading="eager"

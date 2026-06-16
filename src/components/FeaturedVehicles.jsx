@@ -3,6 +3,8 @@ import { useState } from 'react';
 export default function FeaturedVehicles() {
   const [activeFilter, setActiveFilter] = useState('all');
 
+  const getAsset = (path) => import.meta.env.BASE_URL + path.slice(1);
+
   const categories = [
     { id: 'all', label: 'All Showcase' },
     { id: 'luxury', label: 'Luxury Cars' },
@@ -18,7 +20,7 @@ export default function FeaturedVehicles() {
       category: "sports",
       treatment: "Full PPF Wrap + Gold Ceramic Layer",
       year: "2025",
-      image: "/assets/featured_sports.png"
+      image: getAsset('/assets/featured_sports.png')
     },
     {
       id: 2,
@@ -26,7 +28,7 @@ export default function FeaturedVehicles() {
       category: "luxury",
       treatment: "3-Stage Correction + 9H Ceramic Shield",
       year: "2024",
-      image: "/assets/featured_luxury.png"
+      image: getAsset('/assets/featured_luxury.png')
     },
     {
       id: 3,
@@ -34,7 +36,7 @@ export default function FeaturedVehicles() {
       category: "suv",
       treatment: "Decontamination + Stealth PPF Wrap",
       year: "2025",
-      image: "/assets/featured_suv.png"
+      image: getAsset('/assets/featured_suv.png')
     },
     {
       id: 4,
@@ -42,7 +44,7 @@ export default function FeaturedVehicles() {
       category: "daily",
       treatment: "Signature Obsidian Exterior Refinement",
       year: "2024",
-      image: "/assets/hero_car.png"
+      image: getAsset('/assets/hero_car.png')
     }
   ];
 

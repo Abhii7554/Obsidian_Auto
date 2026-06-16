@@ -1,42 +1,44 @@
 import React from 'react';
 
 export default function Services({ onBookClick }) {
+  const getAsset = (path) => import.meta.env.BASE_URL + path.slice(1);
+
   const servicesList = [
     {
       num: "01",
       title: "Exterior Detailing",
       desc: "Deep cleaning, decontamination, multi-stage polishing, and paint enhancement designed to restore showroom gloss.",
-      image: "/assets/hero_car.png" // Reuse hero image for exterior
+      image: getAsset('/assets/hero_car.png') // Reuse hero image for exterior
     },
     {
       num: "02",
       title: "Interior Restoration",
       desc: "Deep cleaning and conditioning of fabric, leather, dashboard, carpets, and advanced odor neutralizing treatments.",
-      image: "/assets/after_interior.png" // Clean interior image
+      image: getAsset('/assets/after_interior.png') // Clean interior image
     },
     {
       num: "03",
       title: "Ceramic Coating",
       desc: "Long-lasting hydrophobic gloss and premium protection against environmental contaminants, chemical etching, and UV rays.",
-      image: "/assets/service_ceramic.png" // Hydrophobic water-beading
+      image: getAsset('/assets/service_ceramic.png') // Hydrophobic water-beading
     },
     {
       num: "04",
       title: "Paint Correction",
       desc: "Multi-stage machine polishing for complete removal of swirl marks, light scratches, oxidation, and paint imperfections.",
-      image: "/assets/after_paint.png" // Corrected paint image
+      image: getAsset('/assets/after_paint.png') // Corrected paint image
     },
     {
       num: "05",
       title: "PPF Installation",
       desc: "Advanced clear Paint Protection Film (PPF) wrap for long-term stone chip defense, self-healing scratches, and physical protection.",
-      image: "/assets/service_ppf.png" // PPF application image
+      image: getAsset('/assets/service_ppf.png') // PPF application image
     },
     {
       num: "06",
       title: "Premium Maintenance Plans",
       desc: "Bespoke monthly and quarterly detailing packages to maintain your vehicle's pristine condition year-round.",
-      image: "/assets/featured_sports.png" // Sleek sports car representation
+      image: getAsset('/assets/featured_sports.png') // Sleek sports car representation
     }
   ];
 

@@ -6,6 +6,8 @@ export default function BeforeAfter() {
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef(null);
 
+  const getAsset = (path) => import.meta.env.BASE_URL + path.slice(1);
+
   const tabs = [
     { id: 'paint', label: 'Paint Correction' },
     { id: 'interior', label: 'Interior Restoration' },
@@ -14,18 +16,18 @@ export default function BeforeAfter() {
 
   const slideData = {
     paint: {
-      before: 'assets/before_paint.png',
-      after: 'assets/after_paint.png',
+      before: getAsset('/assets/before_paint.png'),
+      after: getAsset('/assets/after_paint.png'),
       desc: "Remove paint swirls, micro-scratches, and oxidation to restore deep reflections."
     },
     interior: {
-      before: 'assets/before_interior.png',
-      after: 'assets/after_interior.png',
+      before: getAsset('/assets/before_interior.png'),
+      after: getAsset('/assets/after_interior.png'),
       desc: "Deep decontamination, leather rejuvenation, and meticulous stain extraction."
     },
     ceramic: {
-      before: 'assets/before_paint.png', // base paint before treatment
-      after: 'assets/service_ceramic.png', // glossy coated finish
+      before: getAsset('/assets/before_paint.png'), // base paint before treatment
+      after: getAsset('/assets/service_ceramic.png'), // glossy coated finish
       desc: "Extreme wet-look gloss combined with hydrophobic barrier protection."
     }
   };
